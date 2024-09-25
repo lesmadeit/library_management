@@ -5,24 +5,59 @@
 {% endblock %}
 {% block body %}
 <div class="container">
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 400px; /* Set a maximum width */
+            width: 100%; /* Make it responsive */
+            padding: 20px; /* Add some padding */
+            margin: auto; /* Center the form */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+            border-radius: 8px; /* Slightly round the corners */
+            background-color: #f9f9f9; /* Light background color */
+        }
+
+        input {
+            width: 100%; /* Make inputs take full width of the form */
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button, a {
+            width: 100%; /* Ensure buttons take full width */
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
     <br>
     <h1 class="text-center"><u>Student Login</u></h1>
     <form method="POST"> {% csrf_token %}
 
         <div class="row mt-4">
             <div class="form-group col-md-12">
-                <label><i style="font-weight: bold;">Username</i></label>
-                <input type="text" class="form-control mt-2" name="username" placeholder="Enter Username" required>
+                <label style="font-weight: bold;"> Username </label>
+                <input type="text" name="username" placeholder="Enter Username" required>
             </div>
         </div>
 
         <div class="row mt-4">
             <div class="form-group col-md-12">
-                <label><i style="font-weight: bold;">Password</i></label>
-                <input type="password" class="form-contro; mt-2" name="password" placeholder="Enter Password" required>
+                <label style="font-weight: bold;"> Password </label>
+                <input type="password"  name="password" placeholder="Enter Password" required>
             </div>
         </div>
         <button type="submit" class="btn btn-outline-primary mt-4">Login</button>
+        <br><br>
+        <a href="{% url 'index' %}"  class="btn btn-success"> Back to Home</a>
     </form>
 </div>
 {% endblock %}

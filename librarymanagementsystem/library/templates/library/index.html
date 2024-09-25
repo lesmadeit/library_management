@@ -4,25 +4,25 @@
 {% block css %}
 {% endblock %}
 {% block body %}
-<div class="p-4 bg-light">
-    <div class="container-fluid py-3">
-      <h1 class="display-5 fw-bold">Welcome to Library Management System</h1>
-      <a href="/student_registration/" class="btn btn-success btn-lg">Student Registration</a>
-    </div>
-    <br>
-    <div class="container">
-  <div class="row">
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="hero d-flex align-items-center">
+  <div class="container">
+    <div class="row gy-4 d-flex justify-content-between">
+      <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+        <h2 data-aos="fade-up">Welcome To Easy Library</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Facere distinctio molestiae nisi fugit tenetur repellat non praesentium nesciunt optio quis sit odio nemo quisquam. eius quos reiciendis eum vel eum voluptatem eum maiores eaque id optio ullam occaecati odio est possimus vel reprehenderit</p>
 
-    <div class="col-lg-6">
-      <img src="{% static 'admin.png' %}" width="40%" height="40%" alt=""><br><br>
-        <a class="btn btn-outline-success btn-lg" style="text-align:center" href="/admin_login/">Admin Login</a>
-    </div>
+        
 
-    <div class="col-lg-6">
-      <img src="{% static 'students.png' %}" width="40%" height="40%" alt=""><br><br>
-      <a class="btn btn-outline-success btn-lg" href="/student_login/">Student Login</a>
+        <div class="row gy-4" data-aos="fade-up" data-aos-delay="400">
+        </div>
+      </div>
+
+      <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+        <img src="{% static 'library/img/hero-img.svg' %}" class="img-fluid mb-3 mb-lg-0" alt="">
+      </div>
+
     </div>
   </div>
-  </div>
-</div>
+</section><!-- End Hero Section -->
 {% endblock %}
