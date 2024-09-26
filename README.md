@@ -1,1 +1,1 @@
-A simple responsive bus reservation system using Django and Bootstrap
+A simple responsive library management system using Django and Bootstrap

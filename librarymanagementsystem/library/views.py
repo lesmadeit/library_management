@@ -196,7 +196,7 @@ def admin_login(request):
         if user is not None:
             login(request, user)
             if request.user.is_superuser:
-                return redirect("/add_book")
+                return redirect("/view_books")
             else:
                 return HttpResponse("You are not an admin")
         else:

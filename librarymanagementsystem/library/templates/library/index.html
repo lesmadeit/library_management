@@ -5,7 +5,7 @@
 {% endblock %}
 {% block body %}
 <!-- ======= Hero Section ======= -->
-<section id="hero" class="hero d-flex align-items-center">
+<section id="hero" class="hero d-flex align-items-center"  style="background-image: url('{% static "library/img/hero-bg1.jpg" %}'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 70vh; position: relative;">
   <div class="container">
     <div class="row gy-4 d-flex justify-content-between">
       <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
@@ -18,11 +18,53 @@
         </div>
       </div>
 
-      <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-        <img src="{% static 'library/img/hero-img.svg' %}" class="img-fluid mb-3 mb-lg-0" alt="">
-      </div>
 
     </div>
   </div>
 </section><!-- End Hero Section -->
+<br><br><br><br> 
+
+<!-- ======= About Us Section ======= -->
+<section id="about" class="about pt-0">
+  <div class="container" data-aos="fade-up">
+
+    <div class="row gy-4">
+      <div class="col-lg-6 position-relative align-self-start order-lg-last order-first">
+        <img src="{% static 'library/img/lib.jpg' %}" class="img-fluid" alt="">
+        
+      </div>
+      <div class="col-lg-6 content order-last  order-lg-first">
+        <h3>About Us</h3>
+        <p>
+          Dolor iure expedita id fuga asperiores qui sunt consequatur minima. Quidem voluptas deleniti. Sit quia molestiae quia quas qui magnam itaque veritatis dolores. Corrupti totam ut eius incidunt reiciendis veritatis asperiores placeat.
+        </p>
+        <ul>
+          <li data-aos="fade-up" data-aos-delay="100">
+            <i class="bi bi-diagram-3"></i>
+            <div>
+              <h5>Ullamco laboris nisi ut aliquip consequat</h5>
+              <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi-fullscreen-exit"></i>
+            <div>
+              <h5>Magnam soluta odio exercitationem reprehenderi</h5>
+              <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-broadcast"></i>
+            <div>
+              <h5>Voluptatem et qui exercitationem</h5>
+              <p>Et velit et eos maiores est tempora et quos dolorem autem tempora incidunt maxime veniam</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End About Us Section -->
+
 {% endblock %}
