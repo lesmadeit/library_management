@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 from . import forms, models
 from datetime import date
 from django.contrib.auth.decorators import login_required
+from django.db import IntegrityError
 
 def index(request):
     return render(request, "library/index.html")
@@ -142,7 +143,7 @@ def change_password(request):
                 return render(request, "library/change_password.html", {'alert':alert})
         except:
             pass
-    return render(request, "change_password.html")
+    return render(request, "library/change_password.html")
 
 def student_registration(request):
     if request.method == "POST":
@@ -162,12 +163,22 @@ def student_registration(request):
             passnotmatch = True
             return render(request, "library/student_registration.html", {'passnotmatch':passnotmatch})
         
-        user = User.objects.create_user(username=username, email=email, password=password, first_name=first_name, last_name=last_name)
-        student = Student.objects.create(user=user, phone=phone, branch=branch, classroom=classroom,roll_no=roll_no, image=image)
-        user.save()
-        student.save()
-        alert = True
-        return render(request, "library/student_registration.html", {'alert':alert})
+        if User.objects.filter(username=username).exists():
+            user_exists_error = "Username already exists."
+            return render(request, "library/student_registration.html", {'user_exists_error': user_exists_error})
+        
+
+        try:
+            user = User.objects.create_user(username=username, email=email, password=password, first_name=first_name, last_name=last_name)
+            student = Student.objects.create(user=user, phone=phone, branch=branch, classroom=classroom,roll_no=roll_no, image=image)
+            user.save()
+            student.save()
+            alert = True
+            return render(request, "library/student_registration.html", {'alert':alert})
+        except:
+            error = "An error occurred while creating the account. Please try again."
+            return render(request, "library/student_registration.html", {'error': error})
+        
     return render(request, "library/student_registration.html")
 
 def student_login(request):
