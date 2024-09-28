@@ -9,8 +9,7 @@
         <meta content="" name="description">
         <meta content="" name="keywords">
 
-        <!-- Favicons -->
-        <link href="{% static 'library/img/favicon.png' %}" rel="icon">
+        
         <link href="{% static 'library/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
         <!-- Google Fonts -->
@@ -63,19 +62,16 @@
           </header><!-- End Header -->
       {% block body %}
       {% endblock %}
-
-
-
-
-
       
+
+
     <script src="{% static 'library/js/jquery-3.5.1.min.js' %}"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
+    <script src="{% static 'library/js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'library/js/dataTables.buttons.min.js' %}"></script>
+    <script src="{% static 'library/js/jszip.min.js' %}"></script>
+    <script src="{% static 'library/js/pdfmake.min.js' %}"></script>
+    <script src="{% static 'library/js/vfs_fonts.js' %}"></script>
+    <script src="{% static 'library/js/buttons.html5.min.js' %}"></script>  
 
 
 
@@ -90,6 +86,13 @@
 
     <!-- Template Main JS File -->
     <script src="{% static 'library/js/main.js' %}"></script>
+
+
+
+
+
+      
+    
 
     {% block js %}
     <script>
@@ -106,5 +109,7 @@
       });
     </script>
     {% endblock %}
+
+    
   </body>
 </html>

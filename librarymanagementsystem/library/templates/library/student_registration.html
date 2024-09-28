@@ -65,7 +65,7 @@
   </header><!-- End Header -->
 
 {% block body %}
-<br><br><br><br><br>
+<br><br><br>
 <div class="container">
     <form method="POST" enctype="multipart/form-data"> {% csrf_token %}
         <br>
@@ -147,10 +147,12 @@
         </div>
     </div>
     <button type="submit" class="btn btn-outline-primary mt-4">Register As Student</button>
-    <br><br>
+    <br>
     
     </form>
-    <a href="{% url 'index' %}"  class="btn btn-primary"> Back to Home</a>
+
+    
+    <br><br><br>
 </div>
 {% endblock %}
 {% block js %}

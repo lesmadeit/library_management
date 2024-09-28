@@ -5,12 +5,12 @@
 {% endblock %}
 {% block body %}
 <!-- ======= Hero Section ======= -->
-<section id="hero" class="hero d-flex align-items-center"  style="background-image: url('{% static "library/img/hero-bg1.jpg" %}'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 70vh; position: relative;">
+<section id="hero" class="hero d-flex align-items-center"  style="background-image: url('{% static "library/img/hero-bg2.jpg" %}'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 70vh; position: relative;">
   <div class="container">
     <div class="row gy-4 d-flex justify-content-between">
       <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
         <h2 data-aos="fade-up">Welcome To Easy Library</h2>
-        <p data-aos="fade-up" data-aos-delay="100">Facere distinctio molestiae nisi fugit tenetur repellat non praesentium nesciunt optio quis sit odio nemo quisquam. eius quos reiciendis eum vel eum voluptatem eum maiores eaque id optio ullam occaecati odio est possimus vel reprehenderit</p>
+        <p data-aos="fade-up" data-aos-delay="100">Our platform is desigend with simplicity and functionality in mind, making it easy for students to explore and borrow books, while giving administrators the tools to efficiently manage resources. By bridging the gap between students and the wealth of knowledge within our library, we aim to nurture the next generation of thinkers, creators and leaders.</p>
 
         
 
@@ -36,28 +36,30 @@
       <div class="col-lg-6 content order-last  order-lg-first">
         <h3>About Us</h3>
         <p>
-          Dolor iure expedita id fuga asperiores qui sunt consequatur minima. Quidem voluptas deleniti. Sit quia molestiae quia quas qui magnam itaque veritatis dolores. Corrupti totam ut eius incidunt reiciendis veritatis asperiores placeat.
+          We are dedicated to fostering a culture of learning and discovery within our school community. Our library management system provides
+          students with seamless access to a wide range of educational materials, from text books, to fiction, ensuring that learning never stops, 
+          both inside and outside the classroom. We strive to create an environment where curiosity is encouraged, and students have the tools they need to excel academically.
         </p>
         <ul>
           <li data-aos="fade-up" data-aos-delay="100">
             <i class="bi bi-diagram-3"></i>
             <div>
-              <h5>Ullamco laboris nisi ut aliquip consequat</h5>
-              <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
+              <h5>Simplicity and functionality</h5>
+              <p>A simple and efficient library system</p>
             </div>
           </li>
           <li data-aos="fade-up" data-aos-delay="200">
             <i class="bi bi-fullscreen-exit"></i>
             <div>
-              <h5>Magnam soluta odio exercitationem reprehenderi</h5>
-              <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
+              <h5>Easy to manage admin section</h5>
+              <p>Admin interface with different functionalities</p>
             </div>
           </li>
           <li data-aos="fade-up" data-aos-delay="300">
             <i class="bi bi-broadcast"></i>
             <div>
-              <h5>Voluptatem et qui exercitationem</h5>
-              <p>Et velit et eos maiores est tempora et quos dolorem autem tempora incidunt maxime veniam</p>
+              <h5>Wide variety of books categories</h5>
+              <p>Varying from fiction to educational</p>
             </div>
           </li>
         </ul>
@@ -66,5 +68,152 @@
 
   </div>
 </section><!-- End About Us Section -->
+
+<!-- ======= Services Section ======= -->
+    <section id="service" class="services pt-0">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <span> Services</span>
+          <h2> Services </h2>
+
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'library/img/storage-service.jpg' %}" alt="" class="img-fluid">
+              </div>
+              <h3>Student Borrowing and Return</h3>
+              <p>Students can browse and check out books through our user-friendly portal. The system tracks and records due dates, ensuring students adhere to the rules</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'library/img/logistics-service.jpg' %}" alt="" class="img-fluid">
+              </div>
+              <h3>Admin Resource Management</h3>
+              <p>Administrators have full control over the library's collection, from adding new titles to aproving and issuing books.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'library/img/lib.jpg' %}" alt="" class="img-fluid">
+              </div>
+              <h3>Digital Tracking</h3>
+              <p>Students can keep track of a list of books they have borrowed and the time left to return them, as well as the accumulated fine if the deadline has expired.</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'library/img/trucking-service.jpg' %}" alt="" class="img-fluid">
+              </div>
+              <h3>Performance Insights for Admin</h3>
+              <p>Administrators have access to valuable insights into student reading habits and book circulation patterns</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'library/img/packaging-service.jpg' %}" alt="" class="img-fluid">
+              </div>
+              <h3>Packaging</h3>
+              <p>Illo consequuntur quisquam delectus praesentium modi dignissimos facere vel cum onsequuntur maiores beatae consequatur magni voluptates</p>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'library/img/warehousing-service.jpg' %}" alt="" class="img-fluid">
+              </div>
+              <h3>Warehousing</h3>
+              <p>Quas assumenda non occaecati molestiae. In aut earum sed natus eatae in vero. Ab modi quisquam aut nostrum unde et qui est non quo nulla</p>
+            </div>
+          </div><!-- End Card Item -->
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span>Logis</span>
+          </a>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>
+            A108 Adam Street <br>
+            New York, NY 535022<br>
+            United States <br><br>
+            <strong>Phone:</strong> +1 5589 55488 55<br>
+            <strong>Email:</strong> info@example.com<br>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Logis</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
 
 {% endblock %}
