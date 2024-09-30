@@ -14,14 +14,14 @@ class Book(models.Model):
     
 class Student(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    classroom = models.CharField(max_length=10)
-    branch = models.CharField(max_length=10)
-    roll_no = models.CharField(max_length=3, blank=True)
+    course = models.CharField(max_length=10)
+    department = models.CharField(max_length=10)
+    reg_no = models.CharField(max_length=3, blank=True)
     phone = models.CharField(max_length=10, blank=True)
     image = models.ImageField(upload_to="", blank=True)
 
     def __str__(self):
-        return str(self.user) + " ["+str(self.branch)+']' + "["+str(self.classroom)+']' + "["+str(self.roll_no)+']'
+        return str(self.user) + " ["+str(self.department)+']' + "["+str(self.course)+']' + "["+str(self.reg_no)+']'
     
 
 def expiry():

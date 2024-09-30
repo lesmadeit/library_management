@@ -102,15 +102,15 @@ def edit_profile(request):
     if request.method == "POST":
         email = request.POST['email']
         phone = request.POST['phone']
-        branch = request.POST['branch']
-        classroom = request.POST['classroom']
-        roll_no = request.POST['roll_no']
+        department = request.POST['department']
+        course = request.POST['course']
+        reg_no = request.POST['reg_no']
 
         student.user.email = email
         student.phone = phone
-        student.branch = branch
-        student.classroom = classroom
-        student.roll_no = roll_no
+        student.department = department
+        student.course = course
+        student.reg_no = reg_no
         student.user.save()
         student.save()
         alert = True
@@ -152,9 +152,9 @@ def student_registration(request):
         last_name = request.POST['last_name']
         email = request.POST['email']
         phone = request.POST['phone']
-        branch = request.POST['branch']
-        classroom = request.POST['classroom']
-        roll_no = request.POST['roll_no']
+        department = request.POST['department']
+        course = request.POST['course']
+        reg_no = request.POST['reg_no']
         image = request.FILES['image']
         password = request.POST['password']
         confirm_password = request.POST['confirm_password']
@@ -170,7 +170,7 @@ def student_registration(request):
 
         try:
             user = User.objects.create_user(username=username, email=email, password=password, first_name=first_name, last_name=last_name)
-            student = Student.objects.create(user=user, phone=phone, branch=branch, classroom=classroom,roll_no=roll_no, image=image)
+            student = Student.objects.create(user=user, phone=phone, department=department, course=course, reg_no=reg_no, image=image)
             user.save()
             student.save()
             alert = True

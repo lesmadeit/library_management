@@ -9,9 +9,7 @@
         <meta content="" name="description">
         <meta content="" name="keywords">
 
-        <!-- Favicons -->
-        <link href="{% static 'library/img/favicon.png' %}" rel="icon">
-        <link href="{% static 'library/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+        
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,19 +49,19 @@
               <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
               <nav id="navbar" class="navbar">
                 <ul>
-                  <li><a style="color: black;" href="/view_students" class="active">View All Students</a></li>
-                  <li class="dropdown"><a style="color: black;" href="#"><span>Books</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                  <li><a style="color: black;" href="{% url 'view_students' %}" class="active">View All Students</a></li>
+                  <li class="dropdown"><a style="color: black;"><span>Books</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                      <li><a style="color: black;" href="/add_book/"> Add Books </a></li>
-                      <li><a style="color: black;" href="/view_books/"> View All Books </a></li>
+                      <li><a style="color: black;" href="{% url 'add_book' %}"> Add Books </a></li>
+                      <li><a style="color: black;" href="{% url 'view_books' %}"> View All Books </a></li>
                       
                     </ul>
                   </li>
 
-                  <li class="dropdown"><a style="color: black;" href="#"><span>Issue Book</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                  <li class="dropdown"><a style="color: black;"><span>Issue Book</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                      <li><a href="/issue_book/"> Issue A Book </a></li>
-                      <li><a href="/view_issued_book/"> View All Issued Books </a></li>
+                      <li><a href="{% url 'issue_book' %}"> Issue A Book </a></li>
+                      <li><a href="{% url 'view_issued_book' %}"> View All Issued Books </a></li>
                     </ul>
                   </li>
                   <li><a style="color: black;" href="/logout/"> Logout </a></li>

@@ -49,10 +49,10 @@
               <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
               <nav id="navbar" class="navbar">
                 <ul>
-                  <li><a style="color: black;" href="/change_password/" class="active"> Change Password </a></li>
-                  <li><a style="color: black;" href="/profile/"> Profile </a>
-                  <li><a style="color: black;" href="/student_issued_books/"> View Issued Books </a></li>
-                  <li><a style="color: black;" href="/logout/"> Logout </a></li>
+                  <li><a style="color: black;" href="{% url 'change_password' %}" class="active"> Change Password </a></li>
+                  <li><a style="color: black;" href="{% url 'profile' %}"> Profile </a>
+                  <li><a style="color: black;" href="{% url 'student_issued_books' %}"> View Issued Books </a></li>
+                  <li><a style="color: black;" href="{% url 'logout' %}"> Logout </a></li>
                   
                   
                 </ul>

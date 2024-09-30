@@ -18,23 +18,23 @@
                     <th style="border: 1px solid black; padding: 10px; background-color: #f2f2f2;">ID</th>
                     <th style="border: 1px solid black; padding: 10px; background-color: #f2f2f2;">Email</th>
                     <th style="border: 1px solid black; padding: 10px; background-color: #f2f2f2;">Mobile Number</th>
-                    <th style="border: 1px solid black; padding: 10px; background-color: #f2f2f2;">Branch</th>
+                    <th style="border: 1px solid black; padding: 10px; background-color: #f2f2f2;">Department</th>
                     <th style="border: 1px solid black; padding: 10px; background-color: #f2f2f2;">Class</th>
-                    <th style="border: 1px solid black; padding: 10px; background-color: #f2f2f2;">Roll Number</th>
+                    <th style="border: 1px solid black; padding: 10px; background-color: #f2f2f2;">Registration Number</th>
                     <th style="border: 1px solid black; padding: 10px; background-color: #f2f2f2;">Delete</th>
                 </tr>
             </thead>
             <tbody>
                 {% for student in students %}
                 <tr class="text-center">
-                    <td style="border: 1px solid black; padding: 8px;" >{{forloop.counter}}.</td>
+                    <td style="border: 1px solid black; padding: 8px;">{{forloop.counter}}.</td>
                     <td style="border: 1px solid black; padding: 8px;">{{student.user.get_full_name}}</td>
                     <td style="border: 1px solid black; padding: 8px;">{{student.user.id}}</td>
                     <td style="border: 1px solid black; padding: 8px;">{{student.user.email}}</td>
                     <td style="border: 1px solid black; padding: 8px;">{{student.phone}}</td>
-                    <td style="border: 1px solid black; padding: 8px;">{{student.branch}}</td>
-                    <td style="border: 1px solid black; padding: 8px;">{{student.classroom}}</td>
-                    <td style="border: 1px solid black; padding: 8px;">{{student.roll_no}}</td>
+                    <td style="border: 1px solid black; padding: 8px;">{{student.department}}</td>
+                    <td style="border: 1px solid black; padding: 8px;">{{student.course}}</td>
+                    <td style="border: 1px solid black; padding: 8px;">{{student.reg_no}}</td>
                     <td style="border: 1px solid black; padding: 8px;"><a href="/delete_student/{{student.id}}/" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this student?')">Delete</a></td>
                 </tr>
                 {% endfor %}
